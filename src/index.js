@@ -49,6 +49,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/" element={<Layout />}>
           <Route index element={<App />} />
           <Route path="about" element={<About />} />
+          <Route path="dashboard" element={<Dashboard />} />
         </Route>
       </Routes>
     </BrowserRouter>
