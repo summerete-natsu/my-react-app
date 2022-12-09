@@ -2,11 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 
 const Dashboard = ({ signOut, user }) => {
-  const test = () => {
-    alert(2)
-  }
  
-
   return (
     <>
     <div>dashboard 3</div>
@@ -18,9 +14,3 @@ const Dashboard = ({ signOut, user }) => {
 
 
 export default Dashboard;
-
-
-Feedback
-Looking for language selection? Find it in the new 
-Unified Settings
-© 2022, Amazon Web Ser
