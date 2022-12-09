@@ -16,6 +16,6 @@ const Dashboard = ({ signOut, user }) => {
     </>
   )
 }
-
+       
 
 export default Dashboard;
