@@ -1,7 +1,7 @@
 /* src/App.js */
 import React, { useEffect, useState } from "react";
 import { Amplify, API, graphqlOperation } from "aws-amplify";
-import { createTodo } from "./graphql/mutations";
+import { createTodo, deleteTodo } from "./graphql/mutations";
 import { listTodos } from "./graphql/queries";
 import { withAuthenticator, Button, Heading } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
@@ -31,6 +31,11 @@ const App = ({ signOut, user }) => {
     } catch (err) {
       console.log("error fetching todos");
     }
+  }
+
+  async function deleteTodoF(item) {
+    await API.graphql(graphqlOperation(deleteTodo, { input: {id: item.id} }));
+    fetchTodos()
   }
 
   async function addTodo() {
@@ -73,6 +78,7 @@ const App = ({ signOut, user }) => {
       <button style={styles.button} onClick={addTodo}>
         Create Todo
       </button>
+     
       {todos.map((todo, index) => (
         <div key={todo.id ? todo.id : index} style={styles.todo}>
           <p style={styles.todoName}>{todo.name}</p>
@@ -80,6 +86,9 @@ const App = ({ signOut, user }) => {
           <p style={styles.todoName}>
             {new Date(todo.date).toLocaleTimeString()}
           </p>
+          <button style={styles.button} onClick={() => deleteTodoF(todo)}>
+       Delete
+      </button>
           <p style={styles.todoDescription}>{todo.description}</p>
         </div>
       ))}
