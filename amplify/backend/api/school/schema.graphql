@@ -9,3 +9,13 @@ type Todo @model {
   date: AWSDateTime
   description: String
 }
+
+
+type Contact @model {
+  id: ID!
+  name: String
+  mail: String
+  tel: Number
+  description: String
+}
+

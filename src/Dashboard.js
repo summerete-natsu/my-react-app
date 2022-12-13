@@ -25,11 +25,10 @@ const Dashboard = ({ signOut, user }) => {
           </div>
           <div>
           <div className="info">
-            <div>VIPコース</div>
+            <div>映画館</div>
             <div>- １対１</div>
             <div>- 親子一緒</div>
-            <div>- 45mコース</div>
-            <div>- 平日: 19:00 ~ 20:00</div>
+            <div>- 2.5hコース</div>
             <div>土日祝: 9:00 ~ 18:00</div>
           </div>
 
@@ -59,11 +58,10 @@ const Dashboard = ({ signOut, user }) => {
         <div className="s3 h-area-su"></div>
         <div className="s4 h-area-su"></div>
         <div className="info">
-            <div>VIPコース</div>
-            <div>- １対１</div>
+            <div>ベーキング</div>
+            <div>-月1</div>
             <div>- 親子一緒</div>
-            <div>- 45mコース</div>
-            <div>- 平日: 19:00 ~ 20:00</div>
+            <div>- 2.5hコース</div>
             <div>土日祝: 9:00 ~ 18:00</div>
           </div>
       </div>

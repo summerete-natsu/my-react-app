@@ -119,18 +119,43 @@ code {
 
 
 .left .pic{
-  width: 50vw;
-  height: 400px;
+  width: 40vw;
+  height: 300px;
+  margin-top: 15px;
   margin-bottom: 15px;
+  margin-left: 50px;
+  margin-right: 50px;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('../public/41676.jpg');
 }
 .right .pic{
-  width: 50vw;
+  width: 40vw;
   background-image: url('../public/41675.jpg');
-  height: 400px;
+  height: 300px;
+  margin-top: 15px;
   margin-bottom: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.left .picc{
+  width: 40vw;
+  height: 300px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../public/41676toeic.jpg');
+}
+.right .picc{
+  width: 40vw;
+  background-image: url('../public/41675culture.jpg');
+  height: 300px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 50px;
   background-repeat: no-repeat;
   background-size: cover;
 }

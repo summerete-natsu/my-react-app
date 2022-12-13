@@ -1,18 +1,49 @@
 /* src/App.js */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { createTodo, deleteTodo } from "./graphql/mutations";
+import { listTodos } from "./graphql/queries";
+import { Amplify, API, graphqlOperation } from "aws-amplify";
 import { Link } from "react-router-dom";
 const initialState = { name: "", description: "" };
 
 const About = ({ signOut, user }) => {
   const [formState, setFormState] = useState(initialState);
+  const [todos, setTodos] = useState([]);
+
+  useEffect(() => {
+    fetchTodos();
+  }, []);
+
   function setInput(key, value) {
     setFormState({ ...formState, [key]: value });
   }
+
+  async function fetchTodos() {
+    try {
+      const todoData = await API.graphql(graphqlOperation(listTodos));
+      const todos = todoData.data.listTodos.items;
+      setTodos(todos);
+    } catch (err) {
+      console.log("error fetching todos");
+    }
+  }
+
+  async function addTodo() {
+    try {
+      if (!formState.name || !formState.description) return;
+      const todo = { ...formState, date: new Date().toISOString() };
+      setTodos([...todos, todo]);
+      setFormState(initialState);
+      await API.graphql(graphqlOperation(createTodo, { input: todo }));
+    } catch (err) {
+      console.log("error creating todo:", err);
+    }
+  }
+
   return (
     <div>
-      
       <div style={styles.container}>
-        <h2>新しくお問い合わせをする：</h2>
+        <h2>お問い合わせ：</h2>
         <input
           onChange={(event) => setInput("name", event.target.value)}
           style={styles.input}
@@ -28,7 +59,7 @@ const About = ({ signOut, user }) => {
         <input
           onChange={(event) => setInput("tel", event.target.value)}
           style={styles.input}
-          value={formState.description}
+          value={formState.tel}
           placeholder="電話番号"
         />
         <input
@@ -38,7 +69,9 @@ const About = ({ signOut, user }) => {
           placeholder="お問い合わせ内容"
         />
 
-        <button style={styles.button}>送信する</button>
+        <button style={styles.button} onClick={addTodo}>
+          送信する
+        </button>
       </div>
       <div className="contact-area">
         <div className="contact">
@@ -85,3 +118,4 @@ const styles = {
 };
 
 export default About;
+    
