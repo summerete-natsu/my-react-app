@@ -1,6 +1,6 @@
 /* src/App.js */
 import React, { useEffect, useState } from "react";
-import { createTodo, deleteTodo } from "./graphql/mutations";
+import { createContact, deleteTodo } from "./graphql/mutations";
 import { listTodos } from "./graphql/queries";
 import { Amplify, API, graphqlOperation } from "aws-amplify";
 import { Link } from "react-router-dom";
@@ -8,33 +8,21 @@ const initialState = { name: "", description: "" };
 
 const About = ({ signOut, user }) => {
   const [formState, setFormState] = useState(initialState);
-  const [todos, setTodos] = useState([]);
 
-  useEffect(() => {
-    fetchTodos();
-  }, []);
 
   function setInput(key, value) {
     setFormState({ ...formState, [key]: value });
   }
 
-  async function fetchTodos() {
-    try {
-      const todoData = await API.graphql(graphqlOperation(listTodos));
-      const todos = todoData.data.listTodos.items;
-      setTodos(todos);
-    } catch (err) {
-      console.log("error fetching todos");
-    }
-  }
+  
 
-  async function addTodo() {
+  async function addContact() {
     try {
-      if (!formState.name || !formState.description) return;
-      const todo = { ...formState, date: new Date().toISOString() };
-      setTodos([...todos, todo]);
+      if (!formState.name) return;
+      const contactInfo = { ...formState};
       setFormState(initialState);
-      await API.graphql(graphqlOperation(createTodo, { input: todo }));
+      await API.graphql(graphqlOperation(createContact, { input: contactInfo }));
+      setFormState({name: ''})
     } catch (err) {
       console.log("error creating todo:", err);
     }
@@ -51,7 +39,7 @@ const About = ({ signOut, user }) => {
           placeholder="名前"
         />
         <input
-          onChange={(event) => setInput("email", event.target.value)}
+          onChange={(event) => setInput("mail", event.target.value)}
           style={styles.input}
           value={formState.title}
           placeholder="メールアドレス"
@@ -69,7 +57,7 @@ const About = ({ signOut, user }) => {
           placeholder="お問い合わせ内容"
         />
 
-        <button style={styles.button} onClick={addTodo}>
+        <button style={styles.button} type='button' onClick={addContact}>
           送信する
         </button>
       </div>
@@ -77,13 +65,14 @@ const About = ({ signOut, user }) => {
         <div className="contact">
           <div>
             〒143-0016 東京都大田区大森北６丁目３０−１６平和島駅前
-            <div>☎: 090-0638-1941</div>
+            <div>LineID: line09063801941  LineName:Natsuメイ</div>
+            <div>Tel:090-6380-1941</div>
           </div>
           <div className="contact-img">
             <img src="map.jpg" />
             <img src="map-detail.jpg" />
           </div>
-        </div>
+        </div> 
       </div>
     </div>
   );

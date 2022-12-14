@@ -15,7 +15,7 @@ type Contact @model {
   id: ID!
   name: String
   mail: String
-  tel: Number
+  tel: String
   description: String
 }
 

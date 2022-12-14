@@ -34,6 +34,10 @@ code {
   border-color: #f0f0f0;
   box-shadow:  0 0 3px rgba(0 ,0, 0, .12);
 }
+.top-header nav{
+  display: flex;
+  justify-content: space-between;
+}
 .top-header nav ul {
   list-style: none;
   padding: 0;
@@ -182,6 +186,7 @@ code {
   background: #aaa;  
   padding: 10px 20px 20px 20px;
 }
+
 .contact-img {
   display: flex;
   justify-content: space-between;

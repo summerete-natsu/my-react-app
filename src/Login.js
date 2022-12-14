@@ -1,6 +1,7 @@
 import React from 'react'
 import About from "./About";
 import App from "./App";
+import LoginPage from "./LoginPage";
 import Contact from "./Contact";
 import { withAuthenticator} from "@aws-amplify/ui-react";
 
@@ -29,6 +30,11 @@ function Layout() {
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
+        <ul>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
+        </ul>
       </nav>
 
       <hr />
@@ -41,6 +47,7 @@ function Layout() {
   );
 }
 
+
 const Login = ({ signOut, user }) => {
  
   return (
@@ -51,11 +58,11 @@ const Login = ({ signOut, user }) => {
         <Route path="comment" element={<About />} />
         <Route path="contents" element={<Dashboard />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="login" element={<LoginPage />} />
       </Route>
     </Routes>
   </BrowserRouter>
   )
 }
 
-
-export default withAuthenticator(Login);
+export default Login;
