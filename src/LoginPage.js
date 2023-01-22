@@ -12,7 +12,9 @@ import { Route, Routes, BrowserRouter, Link, Outlet, useLocation } from "react-r
 const Login = ({ signOut, user }) => {
  
   return (
-    <div>Login success</div>
+    <div style={{display:'flex', justifyContent:'center', paddingTop: '15px'}}>
+      <img width={320} src={'qrcode.jpg'} />
+    </div>
   )
 }
 

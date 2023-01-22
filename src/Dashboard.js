@@ -41,7 +41,7 @@ const Dashboard = ({ signOut, user }) => {
         <div className="h2 h-area-fu"></div>
         <div className="h3 h-area-fu"></div>
         <div className="h4 h-area-fu"></div>
-        <div><img src="HelloTalkIDNew.jpg" /></div>
+        <div className="h5 h-area-fu"><img src="HelloTalkIDNew.jpg" /></div>
         <div className="info">
             <div>VIPコース</div>
             <div>- HelloTalkID:summeretenatsu</div>

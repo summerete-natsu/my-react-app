@@ -35,7 +35,7 @@ const About = ({ signOut, user }) => {
         <div className="left">
           <div className="picc"></div>
           <div className="info">
-            <div>TOEIC受験</div>
+            <div>TOEIC受験IntensiveCourse</div>
             <div>-コーヒー喫茶店</div>
             <div>-1hコース</div>
             <div>- 3ヵ月　6ヵ月　1年間</div>
@@ -55,6 +55,61 @@ const About = ({ signOut, user }) => {
             <div>- 平日: 20:00 ~ 22:00</div>
             <div>土日祝: 9:00 ~ 18:00</div>
             <div>料金：月額　100,000Yen</div>
+          </div>
+        </div>
+      </div>
+
+      <div className="index-page">
+        <div className="left">
+          <div className="part12"></div>
+          <div className="info">
+            <div>TOEIC受験Part1 写真描写問題</div>
+            <div>-コーヒー喫茶店</div>
+            <div>-1hコース</div>
+            <div>- 3ヵ月　</div>
+            <div>- 平日: 20:00 ~ 22:00</div>
+            <div>土日祝: 9:00 ~ 18:00</div>
+            <div>料金：3ヵ月間　200,000Yen</div>
+          </div>
+        </div>
+
+        <div className="right">
+          <div className="part12"></div>
+          <div className="info">
+            <div>TOEIC受験Part2　応答問題</div>
+            <div>- コーヒー喫茶店</div>
+            <div>- 1hコース</div>
+            <div>- 平日: 20:00 ~ 22:00</div>
+            <div>土日祝: 9:00 ~ 18:00</div>
+            <div>料金：3ヵ月間　200,000Yen</div>
+          </div>
+        </div>
+      </div>
+
+      <div className="index-page">
+        <div className="left">
+          <div className="part3"></div>
+          <div className="info">
+            <div>TOEIC受験Part3-1　会話問題</div>
+            <div>-コーヒー喫茶店</div>
+            <div>-1hコース</div>
+            <div>- 3ヵ月　</div>
+            <div>- 平日: 20:00 ~ 22:00</div>
+            <div>土日祝: 9:00 ~ 18:00</div>
+            <div>料金：3ヵ月間　200,000Yen</div>
+          </div>
+        </div>
+
+        <div className="right">
+          <div className="part3"></div>
+          <div className="info">
+            <div>TOEIC受験Part3-2　会話問題</div>
+            <div>- コーヒー喫茶店</div>
+            <div>- テーマ指定</div>
+            <div>- 1hコース</div>
+            <div>- 平日: 20:00 ~ 22:00</div>
+            <div>土日祝: 9:00 ~ 18:00</div>
+            <div>料金：3ヵ月間　200,000Yen</div>
           </div>
         </div>
       </div>
