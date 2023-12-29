@@ -68,6 +68,22 @@ const Dashboard = ({ signOut, user }) => {
           </div>
       </div>
 
+      <hr className="hr" />
+      <h2>Fun To Learn</h2>
+      <div className="h-area">
+        <div className="t2 h-area-su"></div>
+        <div className="t2 h-area-su"></div>
+        <div className="t2 h-area-su"></div>
+        <div className="t2 h-area-su"></div>
+        <div className="info">
+            <div>ベーキング</div>
+            <div>-月1</div>
+            <div>- </div>
+            <div>- 2.5hコース</div>
+            <div>土日祝: 9:00 ~ 18:00</div>
+          </div>
+      </div>
+
     </div>
   );
 };

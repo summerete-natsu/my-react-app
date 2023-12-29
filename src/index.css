@@ -121,6 +121,9 @@ code {
   background-image: url(../public/s4.jpg);
 }
 
+.h-area .t2{
+  background-image: url(../public/t2.jpeg);
+}
 
 .left .pic{
   width: 40vw;
