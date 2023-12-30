@@ -71,12 +71,12 @@ const Dashboard = ({ signOut, user }) => {
       <hr className="hr" />
       <h2>Fun To Learn</h2>
       <div className="h-area">
-        <div className="t2 h-area-su"></div>
-        <div className="t2 h-area-su"></div>
-        <div className="t2 h-area-su"></div>
-        <div className="t2 h-area-su"></div>
+        <div className="t3 h-area-su"></div>
+        <div className="t3 h-area-su"></div>
+        <div className="t3 h-area-su"></div>
+        <div className="t3 h-area-su"></div>
         <div className="info">
-            <div>ベーキング</div>
+            <div>English corner</div>
             <div>-月1</div>
             <div>- </div>
             <div>- 2.5hコース</div>
