@@ -70,7 +70,7 @@ const About = ({ signOut, user }) => {
           </div>
           <div className="contact-img">
             <img src="map.jpg" />
-            <img src="map-detail.jpg" />
+            <img src="map-detail copy.jpg" />
           </div>
         </div> 
       </div>
