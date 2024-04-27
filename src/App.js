@@ -22,7 +22,7 @@ const About = ({ signOut, user }) => {
         <div className="right">
           <div className="pic"></div>
           <div className="info">
-            <div>新宿Walking course</div>
+            <div>港区Walking course</div>
             <div>- 2.5hコース</div>
             <div>土日祝: 9:00 ~ 11:30 13:00 ~15:30</div>
             <div>料金：10,000 Yen　月1回</div>
@@ -78,7 +78,7 @@ const About = ({ signOut, user }) => {
         <div className="left">
           <div className="picc"></div>
           <div className="info">
-            <div>夜競馬コース</div>
+            <div>大井夜間競馬コース</div>
             <div>- 2.5hコース</div>
             <div>土日祝: 9:00 ~ 11:30 13:00 ~15:30</div>
             <div>料金：10,000 Yen　月1回</div>
@@ -88,7 +88,7 @@ const About = ({ signOut, user }) => {
         <div className="right">
           <div className="picc"></div>
           <div className="info">
-            <div>平和島BigFunLand</div>
+            <div>屋形船周遊コース</div>
             <div>- 2.5hコース</div>
             <div>土日祝: 9:00 ~ 11:30 13:00 ~15:30</div>
             <div>料金：10,000 Yen　月1回</div>
@@ -106,8 +106,8 @@ const About = ({ signOut, user }) => {
             <div>Weekly Mansion紹介　～5万/週</div>
           </div>
           <div className="contact-img">
-            <img src="LineIDNew.jpg" />
-            <img src="map-detail.jpg" />
+            <img alt="lineID" src="LineIDNew.jpg" />
+            <img alt="map" src="map-detail.jpg" />
 
           </div>
         </div> 
