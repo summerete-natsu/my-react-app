@@ -80,31 +80,13 @@ code {
   margin:  0 ;
 
 }
-.h-area-fu {
-  width: 15vw;
-  height: 300px;
-  background-repeat: no-repeat;
-  background-size: cover; 
-}
-.h-area .h1{
-  background-image: url(../public/h1.jpg);
-}
-
-.h-area .h2{
-  background-image: url(../public/h2.jpg);
-}
-.h-area .h3{
-  background-image: url(../public/h3.jpg);
-}
-.h-area .h4{
-  background-image: url(../public/h4.jpg);
-}
 
 .h-area-su {
   width: 15vw;
   height: 300px;
   background-repeat: no-repeat;
   background-size: cover; 
+  margin-right: 20px;
 }
 
 .h-area .s1{
@@ -120,6 +102,90 @@ code {
 .h-area .s4{
   background-image: url(../public/s4.jpg);
 }
+
+.h-area-fu {
+  width: 10vw;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  margin-left: 20px;
+  
+}
+.h-area .h1{
+  background-image: url(../public/h1.jpg);
+  
+}
+
+.h-area .h2{
+  background-image: url(../public/h2.jpg);
+ 
+}
+.h-area .h3{
+  background-image: url(../public/h3.jpg);
+}
+.h-area .h4{
+  background-image: url(../public/h4.jpg);
+}
+.h-area .h5{
+  background-image: url(../public/h5.jpg);
+}
+
+.h-area-sss {
+  width: 10vw;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  margin-left: 20px;
+  
+}
+.h-area .sss1{
+  background-image: url(../public/sss1.png);
+  
+}
+
+.h-area .sss2{
+  background-image: url(../public/sss2.png);
+ 
+}
+.h-area .sss3{
+  background-image: url(../public/sss3.png);
+}
+.h-area .sss4{
+  background-image: url(../public/sss4.png);
+}
+.h-area .sss5{
+  background-image: url(../public/sss5.png);
+}
+
+.h-area-uma {
+  width: 20vw;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  margin-left: 20px;
+  
+}
+.h-area .uma1{
+  background-image: url(../public/uma1.png);
+  
+}
+
+.h-area .uma2{
+  background-image: url(../public/uma2.png);
+ 
+}
+.h-area .uma3{
+  background-image: url(../public/uma3.png);
+}
+.h-area .uma4{
+  background-image: url(../public/uma4.png);
+}
+.h-area .uma5{
+  background-image: url(../public/uma5.png);
+}
+
+
+
 
 
 .left .pic{
